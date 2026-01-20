@@ -4,134 +4,125 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OriginX - Apply for Position</title>
-    <link rel="stylesheet" href="/css/apply.css">
+
+    <!-- FIXED CSS PATH -->
+    <link rel="stylesheet" href="../css/apply.css">
+
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <header class="navbar">
-        <div class="logo">
-            <div class="logo-icon">O</div>
-            <span>OriginX</span>
+<header class="navbar">
+    <div class="logo">
+        <div class="logo-icon">O</div>
+        <span>OriginX</span>
+    </div>
+
+    <nav class="nav-links">
+        <!-- FIXED LINKS -->
+        <a href="dashboard.html" class="dashboard">Dashboard</a>
+        <a href="jobs.html" class="dashboard">Search Jobs</a>
+        <a href="part_time_jobs.html" class="dashboard">Part Time Jobs</a>
+    </nav>
+
+    <div class="user-profile">
+        <a href="profile.html" class="profile">Profile</a>
+        <!-- FIXED -->
+        <a href="../index.html" class="logout-btn">Logout</a>
+    </div>
+</header>
+
+<main class="apply-container">
+
+    <section class="job-summary-card">
+        <div class="job-header-row">
+            <h2>Frontend Developer</h2>
+            <span class="badge blue">Full-time</span>
         </div>
-        <nav class="nav-links">
-            <a href="/html/dashboard.html" class="dashboard">Dashboard</a>
-            <a href="/html/jobs.html" class="dashboard"">Search Jobs</a>
-            <a href="/html/part_time_jobs.html" class="dashboard"">Part Time Jobs</a>
-        </nav>
-        <div class="user-profile">
-            <a href="/html/profile.html" class="profile">Profile</a>
-            <a  href="/index.html" class="logout-btn">Logout</a>
+        <p class="company-name">TechCorp Solutions</p>
+        <div class="job-meta">
+            <span>📍 Bangalore, India</span>
+            <span>•</span>
+            <span>💰 ₹6-10 LPA</span>
+            <span>•</span>
+            <span>💼 2-4 years</span>
         </div>
-    </header>
+    </section>
 
-    <main class="apply-container">
-        <section class="job-summary-card">
-            <div class="job-header-row">
-                <h2>Frontend Developer</h2>
-                <span class="badge blue">Full-time</span>
+    <section class="application-form-card">
+        <div class="form-header">
+            <div class="icon-box">📄</div>
+            <div>
+                <h3>Apply for this Position</h3>
+                <p>Fill in your details to submit your application</p>
             </div>
-            <p class="company-name">TechCorp Solutions</p>
-            <div class="job-meta">
-                <span>📍 Bangalore, India</span>
-                <span>•</span>
-                <span>💰 ₹6-10 LPA</span>
-                <span>•</span>
-                <span>💼 2-4 years</span>
-            </div>
-        </section>
+        </div>
 
-        <section class="application-form-card">
-            <div class="form-header">
-                <div class="icon-box">📄</div>
-                <div>
-                    <h3>Apply for this Position</h3>
-                    <p>Fill in your details to submit your application</p>
-                </div>
-            </div>
+        <form id="applyForm">
 
-            <form id="applyForm">
-                <div class="form-section">
-                    <h4>Personal Information</h4>
-                    <div class="input-grid">
-                        <div class="input-group">
-                            <label>Full Name *</label>
-                            <input type="text" value="Sathya" required>
-                        </div>
-                        <div class="input-group">
-                            <label>Email Address *</label>
-                            <input type="email" value="Sathya@gmail.com" required>
-                        </div>
-                        <div class="input-group">
-                            <label>Phone Number *</label>
-                            <input type="tel" placeholder="+91 00000 00000" required>
-                        </div>
-                        <div class="input-group">
-                            <label>Current Location *</label>
-                            <input type="text" placeholder="City, Country" required>
-                        </div>
-
-                    </div>
-                </div>
-
-                <div class="form-section">
-                    <h4>Professional Details</h4>
-                    <div class="input-grid">
-                        <div class="input-group">
-                            <label>Years of Experience *</label>
-                            <input type="text" placeholder="e.g., 3 years" required>
-                        </div>
-                        <div class="input-group">
-                            <label>Skills</label>
-                            <input type="text" placeholder="e.g.,frontend,Backend">
-                        </div>
-                        <div class="input-group">
-                            <label>Prepared Work Location</label>
-                            <input type="text" placeholder="e.g., Chennai,Bangalore">
-                        </div>
-                        <div class="input-group">
-                            <label>Expected Salary (LPA) *</label>
-                            <input type="text" placeholder="e.g., 12" required>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="form-section">
-                    <h4>Resume & Documents</h4>
-                    <label class="field-label">Upload Resume *</label>
-                    <div class="upload-zone">
-                        <span class="upload-icon"></span>
-                        <p><a href="#">Click to upload</a></p>
-
-                        <input type="file" hidden id="resumeInput">
-                    </div>
-                </div>
-<!-- 
-                <div class="form-section">
-                    <h4>Additional Information</h4>
+            <div class="form-section">
+                <h4>Personal Information</h4>
+                <div class="input-grid">
                     <div class="input-group">
-                        <label>Cover Letter *</label>
-                        <textarea rows="5" placeholder="Tell us why you're a great fit for this role..." required></textarea>
+                        <label>Full Name *</label>
+                        <input type="text" value="Sathya" required>
                     </div>
-                    <div class="input-grid">
-                        <div class="input-group">
-                            <label>LinkedIn Profile</label>
-                            <input type="url" placeholder="https://linkedin.com/in/username">
-                        </div>
-                        <div class="input-group">
-                            <label>Portfolio URL</label>
-                            <input type="url" placeholder="https://yourportfolio.com">
-                        </div>
+                    <div class="input-group">
+                        <label>Email Address *</label>
+                        <input type="email" value="Sathya@gmail.com" required>
                     </div>
-                </div> -->
-
-                <div class="form-actions">
-                    <button type="submit" class="submit-btn">Submit Application</button>
-                    <a href="/html/dashboard.html" class="cancel-btn">Cancel</a>
+                    <div class="input-group">
+                        <label>Phone Number *</label>
+                        <input type="tel" placeholder="+91 00000 00000" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Current Location *</label>
+                        <input type="text" placeholder="City, Country" required>
+                    </div>
                 </div>
-            </form>
-        </section>
-    </main>
+            </div>
+
+            <div class="form-section">
+                <h4>Professional Details</h4>
+                <div class="input-grid">
+                    <div class="input-group">
+                        <label>Years of Experience *</label>
+                        <input type="text" placeholder="e.g., 3 years" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Skills</label>
+                        <input type="text" placeholder="e.g., Frontend, Backend">
+                    </div>
+                    <div class="input-group">
+                        <label>Prepared Work Location</label>
+                        <input type="text" placeholder="e.g., Chennai, Bangalore">
+                    </div>
+                    <div class="input-group">
+                        <label>Expected Salary (LPA) *</label>
+                        <input type="text" placeholder="e.g., 12" required>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h4>Resume & Documents</h4>
+                <label class="field-label">Upload Resume *</label>
+                <div class="upload-zone">
+                    <p><a href="#">Click to upload</a></p>
+                    <input type="file" hidden id="resumeInput">
+                </div>
+            </div>
+
+            <div class="form-actions">
+                <button type="submit" class="submit-btn">Submit Application</button>
+                <!-- FIXED -->
+                <a href="dashboard.html" class="cancel-btn">Cancel</a>
+            </div>
+
+        </form>
+    </section>
+
+</main>
 
 </body>
 </html>

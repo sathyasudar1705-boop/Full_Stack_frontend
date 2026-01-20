@@ -4,19 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OriginX Admin Dashboard</title>
-    <link rel="stylesheet" href="/css/admin_page.css">
+
+ 
+    <link rel="stylesheet" href="../css/admin_page.css">
 </head>
 <body>
 
 <div class="dashboard-container">
     <header class="header">
-       <div class="logo">
+        <div class="logo">
             <div class="logo-icon">O</div>
             <span>OriginX - Admin</span>
         </div>
-        <div class="user-profile">
 
-            <a href="/index.html" class="logout-btn"><button class="logout-btn">Logout</button></a>
+        <div class="user-profile">
+            <!-- FIXED LINK + removed button inside button -->
+            <a href="../index.html" class="logout-btn">Logout</a>
         </div>
     </header>
 
@@ -28,6 +31,7 @@
                 <span class="trend positive">↑ +2.1% this month</span>
             </div>
         </div>
+
         <div class="stat-card">
             <div>
                 <p>Active Jobs</p>
@@ -35,6 +39,7 @@
                 <span class="trend positive">↑ +1.8% this month</span>
             </div>
         </div>
+
         <div class="stat-card">
             <div>
                 <p>Pending Approvals</p>
@@ -42,6 +47,7 @@
                 <span class="trend warning">Requires attention</span>
             </div>
         </div>
+
         <div class="stat-card">
             <div>
                 <p>Reports</p>
@@ -57,7 +63,7 @@
         <button class="tab-btn" onclick="openTab(event, 'reports')">Reports (2)</button>
     </div>
 
-    <div id="users" class="tab-content active">
+    <div id="users" class="tab-content" style="display:block;">
         <div class="list-item">
             <div class="item-info">
                 <h4>Tech Solutions Inc. <span class="badge employer">Employer</span></h4>
@@ -69,6 +75,7 @@
                 <button class="btn-reject">Reject</button>
             </div>
         </div>
+
         <div class="list-item">
             <div class="item-info">
                 <h4>Vikram Singh <span class="badge job-seeker">Job Seeker</span></h4>
@@ -111,23 +118,22 @@
 </div>
 
 <script>
-    /* --- JAVASCRIPT LOGIC --- */
-    function openTab(evt, tabName) {
-        var i, tabcontent, tablinks;
-        // Hide all contents
-        tabcontent = document.getElementsByClassName("tab-content");
-        for (i = 0; i < tabcontent.length; i++) {
-            tabcontent[i].style.display = "none";
-        }
-        // Remove active class
-        tablinks = document.getElementsByClassName("tab-btn");
-        for (i = 0; i < tablinks.length; i++) {
-            tablinks[i].className = tablinks[i].className.replace(" active", "");
-        }
-        // Show current tab and add active class
-        document.getElementById(tabName).style.display = "block";
-        evt.currentTarget.className += " active";
+function openTab(evt, tabName) {
+    var i, tabcontent, tablinks;
+
+    tabcontent = document.getElementsByClassName("tab-content");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
     }
+
+    tablinks = document.getElementsByClassName("tab-btn");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].classList.remove("active");
+    }
+
+    document.getElementById(tabName).style.display = "block";
+    evt.currentTarget.classList.add("active");
+}
 </script>
 
 </body>
