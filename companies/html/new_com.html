@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OriginX - Post a New Job</title>
-    <link rel="stylesheet" href="/companies/css/new_com.css">
+
+    <!-- Fixed CSS path like first file -->
+    <link rel="stylesheet" href="../css/new_com.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -15,14 +17,13 @@
             <span>OriginX</span>
         </div>
         <nav class="nav-links">
-            <a href="/companies/html/companies_dash.html" class="dashboard">Dashboard</a>
-            <a href="/companies/html/new_com.html" class="dashboard"">Post New Jobs</a>
-            <a href="/companies/html/post_part.html" class="dashboard"">Post New Part Time Jobs</a>
-
+            <a href="companies_dash.html" class="dashboard">Dashboard</a>
+            <a href="new_com.html" class="dashboard">Post New Jobs</a>
+            <a href="post_part.html" class="dashboard">Post New Part Time Jobs</a>
         </nav>
         <div class="user-profile">
-            <a href="/companies/html/com_profile.html" class="profile">Profile</a>
-            <a  href="/index.html" class="logout-btn">Logout</a>
+            <a href="com_profile.html" class="profile">Profile</a>
+            <a href="../../index.html" class="logout-btn">Logout</a>
         </div>
     </header>
 
@@ -62,11 +63,11 @@
                     </div>
 
                     <div class="row">
-                        <div class="input-group">
+                        <div class="input-group flex-1">
                             <label>Min Salary (LPA) *</label>
                             <input type="number" value="6" required>
                         </div>
-                        <div class="input-group">
+                        <div class="input-group flex-1">
                             <label>Max Salary (LPA) *</label>
                             <input type="number" value="10" required>
                         </div>
@@ -80,7 +81,7 @@
                 <div class="form-section">
                     <h3>Job Description</h3>
                     <div class="input-group">
-                        <textarea rows="6" placeholder="Describe the role, team, and what makes this opportunity great..."></textarea>
+                        <textarea rows="6" placeholder="Describe the role, team, and what makes this opportunity great..." required></textarea>
                     </div>
                 </div>
 
@@ -120,7 +121,7 @@
 
                 <div class="form-actions">
                     <button type="submit" class="post-job-btn">Post Job</button>
-                    <a href="/companies/html/companies_dash.html"><button type="button" class="cancel-btn">Cancel</button></a>
+                    <a href="companies_dash.html"><button type="button" class="cancel-btn">Cancel</button></a>
                 </div>
             </form>
         </div>

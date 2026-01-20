@@ -4,29 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OriginX - Employer Dashboard</title>
-    <link rel="stylesheet" href="/companies/css/companies_dash.css">
+    <!-- ✅ Fixed CSS path -->
+    <link rel="stylesheet" href="../css/companies_dash.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
+    <!-- ================= NAVBAR ================= -->
     <header class="navbar">
         <div class="logo">
             <div class="logo-icon">O</div>
             <span>OriginX</span>
         </div>
         <nav class="nav-links">
-            <a href="/companies/html/companies_dash.html" class="dashboard">Dashboard</a>
-            <a href="/companies/html/new_com.html" class="dashboard"">Post New Job</a>
-            <a href="/companies/html/post_part.html" class="dashboard"">Post New Part Time Jobs</a>
-
+            <a href="companies_dash.html" class="dashboard">Dashboard</a>
+            <a href="new_com.html" class="dashboard">Post New Job</a>
+            <a href="post_part.html" class="dashboard">Post New Part Time Jobs</a>
         </nav>
         <div class="user-profile">
-            <a href="/companies/html/com_profile.html" class="profile">Profile</a>
-            <a  href="/index.html" class="logout-btn">Logout</a>
+            <a href="com_profile.html" class="profile">Profile</a>
+            <a href="../../index.html" class="logout-btn">Logout</a>
         </div>
     </header>
 
+    <!-- ================= MAIN DASHBOARD ================= -->
     <main class="dashboard-wrapper">
+
+        <!-- ===== STATS GRID ===== -->
         <section class="stats-grid">
             <div class="stat-card">
                 <div class="stat-content">
@@ -58,13 +62,17 @@
             </div>
         </section>
 
-        <a href="/companies/html/new_com.html"><button class="post-new-job"> Post New Job</button></a>
-        <a href="/companies/html/post_part.html"><button class="post-new-job"> Post New Part Time Job</button></a>
+        <!-- ===== POST NEW JOB BUTTONS ===== -->
+        <a href="new_com.html"><button class="post-new-job">Post New Job</button></a>
+        <a href="post_part.html"><button class="post-new-job">Post New Part Time Job</button></a>
 
+        <!-- ===== CONTENT LAYOUT ===== -->
         <div class="content-layout">
+
+            <!-- ===== POSTED JOBS SECTION ===== -->
             <section class="posted-jobs-section">
                 <h2>Your Posted Jobs</h2>
-                
+
                 <div class="job-item">
                     <div class="job-item-header">
                         <div>
@@ -119,12 +127,12 @@
                     </div>
                 </div>
 
-
             </section>
 
+            <!-- ===== APPLICANTS SIDEBAR ===== -->
             <aside class="applicants-sidebar">
                 <h2>Recent Applicants</h2>
-                
+
                 <div class="applicant-card">
                     <div class="applicant-header">
                         <h4>Rahul Sharma</h4>
@@ -140,7 +148,6 @@
                         <button class="btn-shortlist">Shortlist</button>
                     </div>
                 </div>
-
 
                 <div class="applicant-card">
                     <div class="applicant-header">
@@ -173,6 +180,7 @@
                         <button class="btn-shortlist">Shortlist</button>
                     </div>
                 </div>
+
             </aside>
         </div>
     </main>

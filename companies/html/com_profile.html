@@ -1,140 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OriginX - Company Profile</title>
-    <link rel="stylesheet" href="/companies/css/com_profile.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OriginX - Company Profile</title>
+  <!-- ✅ Fixed CSS path -->
+  <link rel="stylesheet" href="../css/com_profile.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <header class="navbar">
-        <div class="logo">
-            <div class="logo-icon">O</div>
-            <span>OriginX</span>
-        </div>
-       <nav class="nav-links">
-            <a href="/companies/html/companies_dash.html" class="dashboard">Dashboard</a>
-            <a href="/companies/html/new_com.html" class="dashboard"">Post New Job</a>
-            <a href="/companies/html/post_part.html" class="dashboard""> Post New Part Time Jobs</a>
+  <!-- ================= NAVBAR ================= -->
+  <header class="navbar">
+    <div class="logo">
+      <div class="logo-icon">O</div>
+      <span>OriginX</span>
+    </div>
+    <nav class="nav-links">
+      <a href="companies_dash.html" class="dashboard">Dashboard</a>
+      <a href="new_com.html" class="dashboard">Post New Job</a>
+      <a href="post_part.html" class="dashboard">Post New Part Time Jobs</a>
+    </nav>
+    <div class="user-profile">
+      <a href="com_profile.html" class="profile">Profile</a>
+      <a href="../../index.html" class="logout-btn">Logout</a>
+    </div>
+  </header>
 
-        </nav>
-        <div class="user-profile">
-            <a href="/companies/html/com_profile.html" class="profile">Profile</a>
-            <a  href="/index.html" class="logout-btn">Logout</a>
+  <!-- ================= MAIN CONTENT ================= -->
+  <main class="main-content">
+    <div class="form-card">
+      <div class="card-header">
+        <div class="icon-bg">🏢</div>
+        <div>
+          <h2>Company Profile</h2>
+          <p>Build a strong company profile to attract top talent</p>
         </div>
-    </header>
+      </div>
 
-    <main class="main-content">
-        <div class="form-card">
-            <div class="card-header">
-                <div class="icon-bg">🏢</div>
-                <div>
-                    <h2>Company Profile</h2>
-                    <p>Build a strong company profile to attract top talent</p>
-                </div>
+      <form id="companyForm">
+
+        <!-- ===== COMPANY LOGO ===== -->
+        <div class="section">
+          <h3>Company Logo</h3>
+          <div class="logo-upload">
+            <div class="logo-placeholder">
+              <div class="icon-blue">🏢</div>
             </div>
-
-            <form id="companyForm">
-                <div class="section">
-                    <h3>Company Logo</h3>
-                    <div class="logo-upload">
-                        <div class="logo-placeholder">
-                            <div class="icon-blue">🏢</div>
-                        </div>
-                        <div class="upload-controls">
-                            <label for="logoInput" class="btn-blue">Upload Logo</label>
-                            <input type="file" id="logoInput" hidden accept="image/*">
-                            <!-- <p class="file-text">JPG, PNG or GIF (Max 2MB)</p> -->
-                        </div>
-                    </div>
-                </div>
-
-                <div class="section">
-                    <h3>Basic Information</h3>
-                    <div class="form-grid">
-                        <div class="input-group">
-                            <label>Company Name *</label>
-                            <input type="text" placeholder="Enter company name" required>
-                        </div>
-                        <div class="input-group">
-                            <label>Industry *</label>
-                            <select required>
-                                <option value="" disabled selected>Select Industry</option>
-                                <option>Technology</option>
-                                <option>Finance</option>
-                                <option>Healthcare</option>
-                                <option>Education</option>
-                            </select>
-                        </div>
-                        <div class="input-group">
-                            <label>Company Email *</label>
-                            <input type="email" value="sathya@gmail.com" required>
-                        </div>
-                        <div class="input-group">
-                            <label>Phone Number</label>
-                            <input type="tel" value="+91 98765 43210">
-                        </div>
-                        <div class="input-group">
-                            <label>Location *</label>
-                            <input type="text" placeholder="City, Country" required>
-                        </div>
-                        <div class="input-group">
-                            <label>Website</label>
-                            <input type="url" placeholder="https://yourcompany.com">
-                        </div>
-                        <div class="input-group">
-                            <label>Company Size *</label>
-                            <select required>
-                                <option value="" disabled selected>Select Size</option>
-                                <option>1-10 Employees</option>
-                                <option>11-50 Employees</option>
-                                <option>51-200 Employees</option>
-                                <option>201-500 Employees</option>
-                                <option>500+ Employees</option>
-                            </select>
-                        </div>
-                        <div class="input-group">
-                            <label>Founded Year</label>
-                            <input type="text" placeholder="e.g., 2020">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="section">
-                    <h3>Company Description</h3>
-                    <div class="input-group">
-                        <label>About Your Company *</label>
-                        <textarea rows="6" placeholder="Tell job seekers about your company, culture, mission, and what makes you unique..."></textarea>
-                    </div>
-                </div>
-
-                <div class="section">
-                    <h3>Employee Benefits</h3>
-                    <div class="add-input-row">
-                        <input type="text" placeholder="Type a benefit and press Enter or click Add">
-                        <button type="button" class="btn-blue"> Add</button>
-                    </div>
-                </div>
-
-                <div class="actions">
-                    <button type="submit" class="btn-save"> Save Profile</button>
-                    <a href="/companies/html/companies_dash.html"><button type="button" class="btn-cancel">Cancel</button></a>
-                </div>
-            </form>
+            <div class="upload-controls">
+              <label for="logoInput" class="btn-blue">Upload Logo</label>
+              <input type="file" id="logoInput" hidden accept="image/*">
+            </div>
+          </div>
         </div>
 
-        <div class="tips-box">
-            <h4>Profile Optimization Tips</h4>
-            <ul>
-                <li>✅ Complete company profiles receive 3x more applications</li>
-                <li>✅ Add your company logo to build trust and brand recognition</li>
-                <li>✅ Highlight employee benefits to attract top candidates</li>
-                <li>✅ Write a compelling description showcasing your company culture</li>
-            </ul>
+        <!-- ===== BASIC INFO ===== -->
+        <div class="section">
+          <h3>Basic Information</h3>
+          <div class="form-grid">
+            <div class="input-group">
+              <label>Company Name *</label>
+              <input type="text" placeholder="Enter company name" required>
+            </div>
+            <div class="input-group">
+              <label>Industry *</label>
+              <select required>
+                <option value="" disabled selected>Select Industry</option>
+                <option>Technology</option>
+                <option>Finance</option>
+                <option>Healthcare</option>
+                <option>Education</option>
+              </select>
+            </div>
+            <div class="input-group">
+              <label>Company Email *</label>
+              <input type="email" value="sathya@gmail.com" required>
+            </div>
+            <div class="input-group">
+              <label>Phone Number</label>
+              <input type="tel" value="+91 98765 43210">
+            </div>
+            <div class="input-group">
+              <label>Location *</label>
+              <input type="text" placeholder="City, Country" required>
+            </div>
+            <div class="input-group">
+              <label>Website</label>
+              <input type="url" placeholder="https://yourcompany.com">
+            </div>
+            <div class="input-group">
+              <label>Company Size *</label>
+              <select required>
+                <option value="" disabled selected>Select Size</option>
+                <option>1-10 Employees</option>
+                <option>11-50 Employees</option>
+                <option>51-200 Employees</option>
+                <option>201-500 Employees</option>
+                <option>500+ Employees</option>
+              </select>
+            </div>
+            <div class="input-group">
+              <label>Founded Year</label>
+              <input type="text" placeholder="e.g., 2020">
+            </div>
+          </div>
         </div>
-    </main>
+
+        <!-- ===== COMPANY DESCRIPTION ===== -->
+        <div class="section">
+          <h3>Company Description</h3>
+          <div class="input-group">
+            <label>About Your Company *</label>
+            <textarea rows="6" placeholder="Tell job seekers about your company, culture, mission, and what makes you unique..." required></textarea>
+          </div>
+        </div>
+
+        <!-- ===== EMPLOYEE BENEFITS ===== -->
+        <div class="section">
+          <h3>Employee Benefits</h3>
+          <div class="add-input-row">
+            <input type="text" placeholder="Type a benefit and press Enter or click Add">
+            <button type="button" class="btn-blue">Add</button>
+          </div>
+        </div>
+
+        <!-- ===== FORM ACTIONS ===== -->
+        <div class="actions">
+          <button type="submit" class="btn-save">Save Profile</button>
+          <a href="companies_dash.html"><button type="button" class="btn-cancel">Cancel</button></a>
+        </div>
+
+      </form>
+    </div>
+
+    <!-- ===== PROFILE TIPS ===== -->
+    <div class="tips-box">
+      <h4>Profile Optimization Tips</h4>
+      <ul>
+        <li>✅ Complete company profiles receive 3x more applications</li>
+        <li>✅ Add your company logo to build trust and brand recognition</li>
+        <li>✅ Highlight employee benefits to attract top candidates</li>
+        <li>✅ Write a compelling description showcasing your company culture</li>
+      </ul>
+    </div>
+  </main>
 
 </body>
 </html>
