@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OriginX - Post Part-Time Job</title>
+    <link rel="stylesheet" href="/companies/css/post_part.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">
+            <div class="logo-icon">O</div>
+            <span>OriginX</span>
+        </div>
+        <nav class="nav-links">
+            <a href="/companies/html/companies_dash.html" class="dashboard">Dashboard</a>
+            <a href="/companies/html/new_com.html" class="dashboard"">Post New Jobs</a>
+            <a href="/companies/html/post_part.html" class="dashboard"">Post New Part Time Jobs</a>
+
+        </nav>
+        <div class="user-profile">
+            <a href="/companies/html/com_profile.html" class="profile">Profile</a>
+            <a  href="/index.html" class="logout-btn">Logout</a>
+        </div>
+    </header>
+
+    <main class="form-container">
+        <div class="form-card">
+            <div class="form-header">
+                <div class="header-icon-purple">🕒</div>
+                <div>
+                    <h2>Post a Part-Time Job</h2>
+                    <p>Find talented professionals for flexible roles</p>
+                </div>
+            </div>
+
+            <form id="postPartTimeForm">
+                <div class="section">
+                    <h3>Basic Information</h3>
+                    <div class="input-group">
+                        <label>Job Title *</label>
+                        <input type="text" placeholder="e.g., Part-Time Content Writer" required>
+                    </div>
+                    <div class="row">
+                        <div class="input-group flex-1">
+                            <label>Department</label>
+                            <input type="text" placeholder="e.g., Marketing">
+                        </div>
+                        <div class="input-group flex-1">
+                            <label>Job Type *</label>
+                            <select required>
+                                <option value="Remote">Remote</option>
+                                <option value="On-site">On-site</option>
+                                <option value="Hybrid">Hybrid</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-group flex-1">
+                            <label>Location *</label>
+                            <input type="text" placeholder="City, Country or Remote" required>
+                        </div>
+                        <div class="input-group flex-1">
+                            <label>Hours Per Week *</label>
+                            <select required>
+                                <option value="" disabled selected>Select hours</option>
+                                <option>10-15 hours</option>
+                                <option>20-25 hours</option>
+                                <option>Flexible</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h3>Schedule</h3>
+                    <div class="input-group">
+                        <label>Work Schedule *</label>
+                        <select required>
+                            <option value="" disabled selected>Select schedule</option>
+                            <option>Flexible hours</option>
+                            <option>Fixed shifts</option>
+                            <option>Weekend only</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h3>Compensation</h3>
+                    <div class="row">
+                        <div class="input-group flex-1">
+                            <label>Minimum Salary (₹/month) *</label>
+                            <input type="text" placeholder="e.g., 15000" required>
+                        </div>
+                        <div class="input-group flex-1">
+                            <label>Maximum Salary (₹/month) *</label>
+                            <input type="text" placeholder="e.g., 25000" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h3>Job Description</h3>
+                    <div class="input-group">
+                        <label>Description *</label>
+                        <textarea rows="5" placeholder="Describe the role, what the candidate will do, and why they should apply..."></textarea>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h3>Responsibilities</h3>
+                    <div class="add-row">
+                        <input type="text" placeholder="Add a responsibility">
+                        <button type="button" class="btn-add">+ Add</button>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h3>Requirements</h3>
+                    <div class="add-row">
+                        <input type="text" placeholder="Add a requirement">
+                        <button type="button" class="btn-add">+ Add</button>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h3>Required Skills</h3>
+                    <div class="add-row">
+                        <input type="text" placeholder="Add a skill">
+                        <button type="button" class="btn-add">+ Add</button>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h3>Benefits</h3>
+                    <div class="add-row">
+                        <input type="text" placeholder="Add a benefit">
+                        <button type="button" class="btn-add">+ Add</button>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn-post">Post Part-Time Job</button>
+                    <a href="/companies/html/companies_dash.html"><button type="button" class="btn-cancel">Cancel</button></a>
+
+                </div>
+            </form>
+        </div>
+
+        <div class="tips-card">
+            <h4>Part-Time Hiring Tips</h4>
+            <ul>
+                <li>✅ Clearly specify working hours and schedule flexibility</li>
+                <li>✅ Part time roles attract students, freelancers, and career switchers</li>
+                <li>✅ Mention if there's potential for full time conversion</li>
+                <li>✅ Be transparent about salary and benefits for part time work</li>
+            </ul>
+        </div>
+    </main>
+
+</body>
+</html>

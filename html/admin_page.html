@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OriginX Admin Dashboard</title>
+    <link rel="stylesheet" href="/css/admin_page.css">
+</head>
+<body>
+
+<div class="dashboard-container">
+    <header class="header">
+       <div class="logo">
+            <div class="logo-icon">O</div>
+            <span>OriginX - Admin</span>
+        </div>
+        <div class="user-profile">
+
+            <a href="/index.html" class="logout-btn"><button class="logout-btn">Logout</button></a>
+        </div>
+    </header>
+
+    <section class="stats-grid">
+        <div class="stat-card">
+            <div>
+                <p>Total Users</p>
+                <h3>55,247</h3>
+                <span class="trend positive">↑ +2.1% this month</span>
+            </div>
+        </div>
+        <div class="stat-card">
+            <div>
+                <p>Active Jobs</p>
+                <h3>10,432</h3>
+                <span class="trend positive">↑ +1.8% this month</span>
+            </div>
+        </div>
+        <div class="stat-card">
+            <div>
+                <p>Pending Approvals</p>
+                <h3>23</h3>
+                <span class="trend warning">Requires attention</span>
+            </div>
+        </div>
+        <div class="stat-card">
+            <div>
+                <p>Reports</p>
+                <h3>7</h3>
+                <span class="trend danger">Needs review</span>
+            </div>
+        </div>
+    </section>
+
+    <div class="tabs-header">
+        <button class="tab-btn active" onclick="openTab(event, 'users')">Pending Users (3)</button>
+        <button class="tab-btn" onclick="openTab(event, 'jobs')">Pending Jobs (3)</button>
+        <button class="tab-btn" onclick="openTab(event, 'reports')">Reports (2)</button>
+    </div>
+
+    <div id="users" class="tab-content active">
+        <div class="list-item">
+            <div class="item-info">
+                <h4>Tech Solutions Inc. <span class="badge employer">Employer</span></h4>
+                <p>contact@techsolutions.com</p>
+                <small>Registered on 2024-01-05</small>
+            </div>
+            <div class="actions">
+                <button class="btn-approve">Approve</button>
+                <button class="btn-reject">Reject</button>
+            </div>
+        </div>
+        <div class="list-item">
+            <div class="item-info">
+                <h4>Vikram Singh <span class="badge job-seeker">Job Seeker</span></h4>
+                <p>vikram@email.com</p>
+                <small>Registered on 2024-01-05</small>
+            </div>
+            <div class="actions">
+                <button class="btn-approve">Approve</button>
+                <button class="btn-reject">Reject</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="jobs" class="tab-content">
+        <div class="list-item">
+            <div class="item-info">
+                <h4>Senior Full Stack Developer</h4>
+                <p>Company: TechCorp | Salary: ₹15-25 LPA</p>
+                <small>Posted on 2024-01-05</small>
+            </div>
+            <div class="actions">
+                <button class="btn-approve">Approve</button>
+                <button class="btn-reject">Reject</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="reports" class="tab-content">
+        <div class="list-item">
+            <div class="item-info">
+                <h4>Fake recruiter profile</h4>
+                <p>Reason: Fraudulent activity</p>
+            </div>
+            <div class="actions">
+                <button class="btn-investigate">Investigate</button>
+                <button class="btn-reject">Remove</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    /* --- JAVASCRIPT LOGIC --- */
+    function openTab(evt, tabName) {
+        var i, tabcontent, tablinks;
+        // Hide all contents
+        tabcontent = document.getElementsByClassName("tab-content");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+        // Remove active class
+        tablinks = document.getElementsByClassName("tab-btn");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        // Show current tab and add active class
+        document.getElementById(tabName).style.display = "block";
+        evt.currentTarget.className += " active";
+    }
+</script>
+
+</body>
+</html>
