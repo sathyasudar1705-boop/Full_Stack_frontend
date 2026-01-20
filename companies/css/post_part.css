@@ -259,3 +259,106 @@ body {
   display: flex;
   gap: 8px;
 }
+
+
+/* 1️⃣ Navbar adjustments for smaller screens */
+@media (max-width: 1024px) {
+  .navbar {
+    padding: 10px 30px;
+    flex-wrap: wrap;
+  }
+  .nav-links {
+    margin-left: 20px;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 10px 20px;
+  }
+  .nav-links {
+    display: none; /* you can make it a hamburger menu later */
+    width: 100%;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .user-profile {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+}
+
+/* 2️⃣ Dashboard container & form adjustments */
+@media (max-width: 1024px) {
+  .dashboard-container,
+  .form-container {
+    padding: 0 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard-container,
+  .form-container {
+    padding: 0 10px;
+    margin: 20px auto;
+  }
+
+  .form-card {
+    padding: 20px;
+  }
+
+  .form-header h2 {
+    font-size: 16px;
+  }
+
+  .form-header p {
+    font-size: 12px;
+  }
+
+  .row {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .form-actions {
+    flex-direction: column;
+  }
+
+  .btn-post,
+  .btn-cancel {
+    width: 100%;
+  }
+}
+
+/* 3️⃣ Input adjustments */
+@media (max-width: 768px) {
+  .input-group input,
+  .input-group select,
+  .input-group textarea {
+    padding: 10px;
+    font-size: 13px;
+  }
+  .add-row input {
+    padding: 8px 10px;
+    font-size: 12px;
+  }
+  .btn-add {
+    padding: 8px 10px;
+    font-size: 12px;
+  }
+}
+
+/* 4️⃣ Tips card adjustments */
+@media (max-width: 768px) {
+  .tips-card {
+    padding: 15px;
+  }
+  .tips-card h4 {
+    font-size: 13px;
+  }
+  .tips-card li {
+    font-size: 11px;
+  }
+}

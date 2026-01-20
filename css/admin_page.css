@@ -226,3 +226,102 @@ body {
   background: var(--blue);
   color: white;
 }
+
+
+
+
+/* -------------------------------
+   1️⃣ Container Responsive
+---------------------------------*/
+@media (max-width: 1024px) {
+  .dashboard-container {
+    padding: 0 20px;
+  }
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard-container {
+    padding: 0 15px;
+  }
+  .stats-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  .tabs-header {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+}
+
+/* -------------------------------
+   2️⃣ Header / Navbar Responsive
+---------------------------------*/
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+  .logo {
+    font-size: 20px;
+  }
+  .user-profile {
+    gap: 8px;
+  }
+  .logout-btn {
+    font-size: 15px;
+  }
+}
+
+/* -------------------------------
+   3️⃣ Tabs & List Items
+---------------------------------*/
+@media (max-width: 768px) {
+  .tab-btn {
+    padding: 8px 4px;
+    font-size: 14px;
+  }
+  .list-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .item-info h4 {
+    font-size: 15px;
+  }
+  .item-info p {
+    font-size: 13px;
+  }
+  .item-info small {
+    font-size: 11px;
+  }
+  .actions button {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+/* -------------------------------
+   4️⃣ Mobile Typography
+---------------------------------*/
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+  .logo {
+    font-size: 18px;
+  }
+  .stat-card h3 {
+    font-size: 20px;
+  }
+  .stat-card p {
+    font-size: 13px;
+  }
+  .tab-btn {
+    font-size: 13px;
+  }
+}

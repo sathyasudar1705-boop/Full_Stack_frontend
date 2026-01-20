@@ -263,3 +263,90 @@ body {
   border-radius: 8px;
   cursor: pointer;
 }
+
+
+
+
+/* -------------------------------
+   1️⃣ Main Container & Form Grid
+---------------------------------*/
+@media (max-width: 1024px) {
+  .apply-container {
+    padding: 0 20px;
+  }
+  .input-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+}
+
+/* -------------------------------
+   2️⃣ Navbar / Header
+---------------------------------*/
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 12px 20px;
+    gap: 10px;
+  }
+  .nav-links {
+    margin-left: 0;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+  .user-profile {
+    margin-left: 0;
+    gap: 10px;
+    width: 100%;
+    justify-content: flex-start;
+  }
+}
+
+/* -------------------------------
+   3️⃣ Job Summary Card
+---------------------------------*/
+@media (max-width: 768px) {
+  .job-header-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .job-meta {
+    flex-direction: column;
+    gap: 5px;
+  }
+}
+
+/* -------------------------------
+   4️⃣ Form Header & Upload Zone
+---------------------------------*/
+@media (max-width: 480px) {
+  .form-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .icon-box {
+    font-size: 18px;
+    padding: 8px;
+  }
+  .upload-zone {
+    padding: 20px;
+    font-size: 13px;
+  }
+}
+
+/* -------------------------------
+   5️⃣ Buttons & Actions
+---------------------------------*/
+@media (max-width: 480px) {
+  .form-actions {
+    flex-direction: column;
+  }
+  .submit-btn,
+  .cancel-btn {
+    width: 100%;
+    margin: 5px 0;
+  }
+}

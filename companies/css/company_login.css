@@ -110,3 +110,68 @@ body {
 .modal-footer a:hover {
     text-decoration: underline;
 }
+
+
+
+/* -------------------------------
+   1️⃣ Body / Modal Container Responsive
+---------------------------------*/
+@media (max-width: 768px) {
+    body {
+        padding: 10px; /* small padding for mobile */
+        height: auto; /* allow scroll on smaller screens */
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .login-modal {
+        padding: 30px 20px;
+        max-width: 100%; /* take full width on mobile */
+        margin: 20px auto; /* center with margin */
+    }
+}
+
+/* -------------------------------
+   2️⃣ Modal Header Responsive
+---------------------------------*/
+@media (max-width: 480px) {
+    .modal-header h2 {
+        font-size: 22px;
+    }
+
+    .close-x {
+        font-size: 20px;
+    }
+}
+
+/* -------------------------------
+   3️⃣ Form Inputs & Button Responsive
+---------------------------------*/
+@media (max-width: 480px) {
+    .form-group label {
+        font-size: 14px;
+    }
+
+    .form-group input {
+        padding: 12px 14px;
+        font-size: 14px;
+    }
+
+    .login-btn {
+        font-size: 16px;
+        padding: 10px;
+    }
+}
+
+/* -------------------------------
+   4️⃣ Modal Footer Responsive
+---------------------------------*/
+@media (max-width: 480px) {
+    .modal-footer p {
+        font-size: 14px;
+    }
+
+    .modal-footer a {
+        font-size: 14px;
+    }
+}

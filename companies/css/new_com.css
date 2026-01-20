@@ -263,3 +263,131 @@ body {
   cursor: pointer;
   color: var(--text-muted);
 }
+
+
+
+
+/* -------------------------------
+   1️⃣ Navbar Responsive
+---------------------------------*/
+@media (max-width: 1024px) {
+  .navbar {
+    padding: 12px 30px;
+    flex-wrap: wrap;
+  }
+  .nav-links {
+    margin-left: 20px;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 10px 20px;
+  }
+  .nav-links {
+    display: none; /* later hamburger menu add pannalam */
+    width: 100%;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .user-profile {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+}
+
+/* -------------------------------
+   2️⃣ Form & Dashboard Responsive
+---------------------------------*/
+@media (max-width: 1024px) {
+  .dashboard-container,
+  .form-container {
+    padding: 0 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard-container,
+  .form-container {
+    padding: 0 10px;
+    margin: 20px auto;
+  }
+
+  .form-card {
+    padding: 20px;
+  }
+
+  .form-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .form-header h2 {
+    font-size: 18px;
+  }
+
+  .form-header p {
+    font-size: 12px;
+  }
+
+  .row,
+  .skills-input-row {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .form-actions {
+    flex-direction: column;
+  }
+
+  .post-job-btn,
+  .cancel-btn {
+    width: 100%;
+  }
+}
+
+/* -------------------------------
+   3️⃣ Inputs & Buttons Responsive
+---------------------------------*/
+@media (max-width: 768px) {
+  .input-group input,
+  .input-group select,
+  .input-group textarea,
+  .list-item input,
+  .skills-input-row input {
+    padding: 10px;
+    font-size: 13px;
+  }
+
+  .add-btn,
+  .text-add-btn {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+}
+
+/* -------------------------------
+   4️⃣ Dynamic Lists / Skills Responsive
+---------------------------------*/
+@media (max-width: 768px) {
+  .list-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .remove-btn {
+    align-self: flex-end;
+  }
+}
+
+/* -------------------------------
+   5️⃣ General Typography Adjustments
+---------------------------------*/
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+}

@@ -107,3 +107,36 @@ body {
 .modal-footer a:hover {
   text-decoration: underline;
 }
+
+
+
+
+/* Responsive Modal */
+@media (max-width: 500px) {
+  .modal-container {
+    padding: 20px;
+    width: 90%; /* take most of the screen width */
+  }
+
+  .modal-header h2 {
+    font-size: 22px;
+  }
+
+  .input-group label {
+    font-size: 14px;
+  }
+
+  .input-group input {
+    font-size: 14px;
+    padding: 10px 12px;
+  }
+
+  .login-btn {
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  .modal-footer p {
+    font-size: 14px;
+  }
+}

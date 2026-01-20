@@ -106,3 +106,57 @@ input:focus {
 .footer-text a:hover {
   text-decoration: underline;
 }
+
+
+
+
+/* -------------------------------
+   1️⃣ Body & Modal Responsive
+---------------------------------*/
+@media (max-width: 768px) {
+  body {
+    height: auto;
+    padding: 20px;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .login-card {
+    max-width: 100%;
+    padding: 30px 20px;
+    margin: 20px auto;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+}
+
+/* -------------------------------
+   2️⃣ Form Inputs & Button Responsive
+---------------------------------*/
+@media (max-width: 480px) {
+  input {
+    padding: 10px 12px;
+    font-size: 14px;
+  }
+
+  .login-btn {
+    font-size: 14px;
+    padding: 12px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  .close-btn {
+    font-size: 18px;
+    top: 15px;
+    right: 15px;
+  }
+
+  .footer-text {
+    font-size: 13px;
+  }
+}

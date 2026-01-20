@@ -397,3 +397,96 @@ body {
 footer span{
     color: white;
 }
+
+
+/* -------------------------------
+1️⃣ Navbar Responsive
+---------------------------------*/
+@media (max-width: 1024px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 12px 20px;
+    gap: 10px;
+  }
+  .nav-links {
+    margin-left: 0;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+  .user-profile {
+    margin-left: 0;
+    gap: 10px;
+    width: 100%;
+    justify-content: flex-start;
+  }
+}
+
+/* -------------------------------
+2️⃣ Stats Row
+---------------------------------*/
+@media (max-width: 900px) {
+  .stats-row {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+}
+@media (max-width: 600px) {
+  .stats-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* -------------------------------
+3️⃣ Main Content Layout
+---------------------------------*/
+@media (max-width: 900px) {
+  .main-content {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* -------------------------------
+4️⃣ Job Card
+---------------------------------*/
+@media (max-width: 480px) {
+  .job-title-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .job-meta {
+    flex-direction: column;
+    gap: 5px;
+  }
+  .apply-btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* -------------------------------
+5️⃣ Sidebar / Applications
+---------------------------------*/
+@media (max-width: 768px) {
+  .applications-sidebar {
+    margin-top: 20px;
+    width: 100%;
+  }
+}
+
+/* -------------------------------
+6️⃣ Footer Responsive
+---------------------------------*/
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  .footer-divider {
+    display: none;
+  }
+  .footer-social {
+    text-align: left;
+  }
+}

@@ -312,3 +312,142 @@ h2 {
   font-size: 12px;
   cursor: pointer;
 }
+
+
+
+
+
+
+/* -------------------------------
+   1️⃣ Navbar Responsive
+---------------------------------*/
+@media (max-width: 1024px) {
+  .navbar {
+    padding: 15px 30px;
+    flex-wrap: wrap;
+  }
+  .nav-links {
+    margin-left: 20px;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 10px 20px;
+  }
+  .nav-links {
+    display: none; /* later hamburger menu add pannalam */
+    width: 100%;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .user-profile {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+  .logo {
+    font-size: 20px;
+  }
+}
+
+/* -------------------------------
+   2️⃣ Dashboard Container & Stats Grid
+---------------------------------*/
+@media (max-width: 1024px) {
+  .dashboard-container,
+  .dashboard-wrapper {
+    padding: 0 20px;
+  }
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard-wrapper {
+    padding: 0 15px;
+  }
+  .stats-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  .content-layout {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .posted-jobs-section,
+  .applicants-sidebar {
+    padding: 20px;
+  }
+  h2 {
+    font-size: 16px;
+  }
+}
+
+/* -------------------------------
+   3️⃣ Job Cards & Buttons
+---------------------------------*/
+@media (max-width: 768px) {
+  .job-item {
+    padding: 15px;
+  }
+  .job-item-header h4 {
+    font-size: 14px;
+  }
+  .job-stats {
+    flex-direction: column;
+    gap: 8px;
+    font-size: 12px;
+  }
+  .job-actions {
+    flex-direction: column;
+  }
+  .btn-primary,
+  .btn-secondary,
+  .post-new-job {
+    width: 100%;
+    font-size: 14px;
+    padding: 10px;
+  }
+}
+
+/* -------------------------------
+   4️⃣ Sidebar / Applicants
+---------------------------------*/
+@media (max-width: 768px) {
+  .applicant-card {
+    padding: 15px 0;
+  }
+  .sub-role,
+  .experience,
+  .tags span {
+    font-size: 11px;
+  }
+  .applicant-actions {
+    flex-direction: column;
+    gap: 8px;
+  }
+  .btn-view,
+  .btn-shortlist {
+    width: 100%;
+    font-size: 11px;
+    padding: 6px;
+  }
+}
+
+/* -------------------------------
+   5️⃣ Typography adjustments for small screens
+---------------------------------*/
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+  .logo {
+    font-size: 18px;
+  }
+  h2 {
+    font-size: 14px;
+  }
+}
